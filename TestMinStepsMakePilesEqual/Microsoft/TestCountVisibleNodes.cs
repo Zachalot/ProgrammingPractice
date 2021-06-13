@@ -1,4 +1,5 @@
 ﻿using InterviewQuestions.Microsoft;
+using InterviewQuestions.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,13 +22,13 @@ namespace UnitTests
                 20 21 1
             */
 
-            Node root = new Node(5);
-            root.left = new Node(3);
-            root.right = new Node(10);
+            TreeNode root = new TreeNode(5);
+            root.left = new TreeNode(3);
+            root.right = new TreeNode(10);
             
-            root.left.left = new Node(20);
-            root.left.right = new Node(21);
-            root.right.left = new Node(1);
+            root.left.left = new TreeNode(20);
+            root.left.right = new TreeNode(21);
+            root.right.left = new TreeNode(1);
 
             int count = 0;
             count = CountVisibleNodes.CountNodes(root);

@@ -1,7 +1,9 @@
-﻿using InterviewQuestions.Models;
+﻿using InterviewQuestions;
+using InterviewQuestions.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Utilities.BinaryTreeUtilities;
 using Xunit;
 
 namespace UnitTests.Models
@@ -19,7 +21,13 @@ namespace UnitTests.Models
             root.left.right = new TreeNode(3);
             root.left.left = new TreeNode(8);
 
-            root.PrintTree();
+            root.LevelOrderPrint();
+
+            PrintableTreeNode printableRoot = root.ToPrintableTree();
+
+            printableRoot.Print();
+
+            Assert.True(true);
         }
     }
 }

@@ -1,12 +1,30 @@
-﻿using InterviewQuestions.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using InterviewQuestions.Models;
 
-namespace InterviewQuestions.General.BinaryTrees
+namespace Utilities.BinaryTreeUtilities
 {
-    public static class Utilities
+    public static class BinaryTreeUtilities
     {
+
+        /*
+            simple demonstration of the print capabilities of BinaryTreeUtilities
+         */
+        public static void DemoBinaryTreeUtilities() 
+        {
+            TreeNode root = new TreeNode(5);
+            root.left = new TreeNode(1);
+            root.right = new TreeNode(4);
+            root.right.right = new TreeNode(7);
+            root.left.right = new TreeNode(3);
+            root.left.left = new TreeNode(8);
+
+            root.LevelOrderPrint();
+
+            PrintableTreeNode printableRoot = root.ToPrintableTree();
+
+            printableRoot.Print();
+        }
         public static TreeNode CreateTree(int?[] array)
         {
 
@@ -50,14 +68,16 @@ namespace InterviewQuestions.General.BinaryTrees
         }
 
         // print a level order array of all of the nodes in the tree from root
-        public static void LevelOrderPrint(this TreeNode root) {
+        public static void LevelOrderPrint(this TreeNode root)
+        {
 
             Queue<TreeNode> nodeQueue = new Queue<TreeNode>();
 
             nodeQueue.Enqueue(root);
             TreeNode currentNode = new TreeNode(root.val);
 
-            while (nodeQueue.Count > 0) {
+            while (nodeQueue.Count > 0)
+            {
 
                 currentNode = nodeQueue.Dequeue();
 
@@ -67,7 +87,8 @@ namespace InterviewQuestions.General.BinaryTrees
                 {
                     nodeQueue.Enqueue(currentNode.left);
                 }
-                else if (currentNode.val != null) {
+                else if (currentNode.val != null)
+                {
                     nodeQueue.Enqueue(new TreeNode(null));
                 }
 
@@ -76,17 +97,18 @@ namespace InterviewQuestions.General.BinaryTrees
                 {
                     nodeQueue.Enqueue(currentNode.right);
                 }
-                else if (currentNode.val != null) {
+                else if (currentNode.val != null)
+                {
                     nodeQueue.Enqueue(new TreeNode(null));
                 }
-                    
+
             }
 
             Console.WriteLine();
         }
 
         // Convert the entire tree starting from the root to a printable tree
-        public static PrintableTreeNode ToPrintableTree(this TreeNode root) 
+        public static PrintableTreeNode ToPrintableTree(this TreeNode root)
         {
             //Stack<TreeNode> nodeStack = new Stack<TreeNode>();
 
@@ -120,7 +142,7 @@ namespace InterviewQuestions.General.BinaryTrees
         }
 
         // TODO: test this ... some how ...
-        private static PrintableTreeNode ToPrintableTreeHelper(TreeNode root, PrintableTreeNode parent) 
+        private static PrintableTreeNode ToPrintableTreeHelper(TreeNode root, PrintableTreeNode parent)
         {
             if (root.left == null && root.right == null)
             {
