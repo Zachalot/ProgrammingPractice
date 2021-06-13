@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "InterviewQuestions/1.0.0": {
+        "dependencies": {
+          "InterviewQuestions.Models": "1.0.0",
+          "Utilities": "1.0.0"
+        },
+        "runtime": {
+          "InterviewQuestions.dll": {}
+        }
+      },
+      "InterviewQuestions.Models/1.0.0": {
+        "runtime": {
+          "InterviewQuestions.Models.dll": {}
+        }
+      },
+      "Utilities/1.0.0": {
+        "dependencies": {
+          "InterviewQuestions.Models": "1.0.0"
+        },
+        "runtime": {
+          "Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InterviewQuestions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InterviewQuestions.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

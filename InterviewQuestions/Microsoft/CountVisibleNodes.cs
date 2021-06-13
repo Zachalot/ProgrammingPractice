@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterviewQuestions.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,35 +9,25 @@ namespace InterviewQuestions.Microsoft
      
         
      */
-    public class Node {
-
-        public int data;
-        public Node left = null;
-        public Node right = null;
-
-        public Node(int datum) {
-            data = datum;
-        }
-    }
     public static class CountVisibleNodes
     {
-        public static int CountNodes(Node node) {
+        public static int CountNodes(TreeNode node) {
             int maxNode = 0;
             int count = 0;
 
-            PreOrder(node, ref count, node.data);
+            PreOrder(node, ref count, node.val.GetValueOrDefault());
 
             return count;
         }
 
         // Bass by ref solution
-        public static void PreOrder(Node node, ref int count, int maxNode)
+        public static void PreOrder(TreeNode node, ref int count, int maxNode)
         {
             if (node == null)
                 return;
 
-            if (node.data >= maxNode) {
-                maxNode = node.data;
+            if (node.val >= maxNode) {
+                maxNode = node.val.GetValueOrDefault();
                 count = count + 1;
             }
 

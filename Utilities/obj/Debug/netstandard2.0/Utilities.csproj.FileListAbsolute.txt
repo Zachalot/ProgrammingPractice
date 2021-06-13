@@ -1,0 +1,12 @@
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\bin\Debug\netstandard2.0\Utilities.deps.json
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\bin\Debug\netstandard2.0\Utilities.dll
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\bin\Debug\netstandard2.0\Utilities.pdb
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\bin\Debug\netstandard2.0\InterviewQuestions.Models.dll
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\bin\Debug\netstandard2.0\InterviewQuestions.Models.pdb
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.csprojAssemblyReference.cache
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfo.cs
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.csproj.CopyComplete
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.dll
+C:\Users\zdwei\source\repos\ProgrammingPractice\Utilities\obj\Debug\netstandard2.0\Utilities.pdb
