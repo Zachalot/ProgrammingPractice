@@ -141,10 +141,10 @@ namespace InterviewQuestions.General.BinaryTrees
             currentNode.Node = root;
 
             if (root.left != null)
-                currentNode.Left = root.left.ToPrintableTree();
+                currentNode.Left = ToPrintableTreeHelper(root.left, currentNode);
 
             if (root.right != null)
-                currentNode.Right = root.right.ToPrintableTree();
+                currentNode.Right = ToPrintableTreeHelper(root.right, currentNode);
 
             return currentNode;
         }
@@ -157,7 +157,7 @@ namespace InterviewQuestions.General.BinaryTrees
             var next = root;
             for (int level = 0; next != null; level++)
             {
-                var item = new PrintableTreeNode { Node = next.Node, Text = next.Node.val.ToString() };
+                var item = new PrintableTreeNode { Node = next.Node, Left = next.Left, Right = next.Right, Text = next.Node.val.ToString() };
                 if (level < last.Count)
                 {
                     item.StartPos = last[level].EndPos + spacing;
@@ -182,6 +182,7 @@ namespace InterviewQuestions.General.BinaryTrees
                         item.StartPos = Math.Max(item.StartPos, item.Parent.EndPos + 1);
                     }
                 }
+
                 next = next.Left ?? next.Right;
                 for (; next == null; item = item.Parent)
                 {
